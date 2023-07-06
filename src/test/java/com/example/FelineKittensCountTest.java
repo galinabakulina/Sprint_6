@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class FelineKittensCountTest {
-    @Mock
+
     private Feline feline;
     private final int expected;
     private final int kittensCount;

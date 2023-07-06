@@ -12,14 +12,9 @@ public class AnimalTest {
     @Before
     public void setUp(){ animal = new Animal(); }
 
-    @Test
+    @Test (expected = Exception.class)
     public void invalidAnimalKind() throws Exception {
-        try {
-            List<String> actual = animal.getFood("Всеядное");
-            assertTrue(false);
-        } catch (Exception exception){
-            assertTrue(true);
-        }
+        List<String> actual = animal.getFood("Всеядное");
     }
     @Test
     public void getFamily() {

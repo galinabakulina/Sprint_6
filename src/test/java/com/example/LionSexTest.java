@@ -1,9 +1,12 @@
 package com.example;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 
 import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
@@ -21,6 +24,11 @@ public class LionSexTest {
     @Parameterized.Parameters
     public static Object[][] getTestData() {
         return new Object[][] {{"Самка", false}, {"Самец", true}};
+    }
+
+    @Before
+    public void init() {
+        MockitoAnnotations.initMocks(this);
     }
 
     @Test

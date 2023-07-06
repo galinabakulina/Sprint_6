@@ -38,13 +38,8 @@ public class LionTest {
         assertEquals(expected, actual);
     }
 
-    @Test
+    @Test (expected = Exception.class)
     public void invalidSex() throws Exception {
-        try {
-            lion = new Lion(feline, "Зайка");
-            assertTrue(false);
-        } catch (Exception exception){
-            assertTrue(true);
-        }
+        lion = new Lion(feline, "Зайка");
     }
 }
